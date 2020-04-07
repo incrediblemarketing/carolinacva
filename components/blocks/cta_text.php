@@ -13,8 +13,8 @@
 
 $content_title = get_sub_field( 'content_title' );
 $content       = get_sub_field( 'content' );
-$page_link       = get_sub_field( 'page_link' );
-$image       = get_sub_field( 'background_image' );
+$page_link     = get_sub_field( 'page_link' );
+$image         = get_sub_field( 'background_image' );
 ?>
 
 <svg class="top-blue-curve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1919.98 759.91" preserveAspectRatio="xMaxYMin slice">
@@ -26,14 +26,14 @@ $image       = get_sub_field( 'background_image' );
 	</defs>
 	<image class="blue-curve-image" preserveAspectRatio="xMinYMid slice" x="0" y="0" viewBox="0 0 1919.98 759.91" mask="url(#blue-curve-mask)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo $image['sizes']['hero_thumb']; ?>" width="1920" height="760"></image>
 </svg>
-<?php get_template_part( 'components/svg/top-curve'); ?>
+<?php get_template_part( 'components/svg/top-curve' ); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-xl-6 offset-xl-6">
 			<div class="text--holder">
 				<h2><?php echo esc_attr( $content_title ); ?></h2>
 				<?php echo $content; ?>
-				<a href="#" class="btn btn--red">Schedule Consultation</a>
+				<a href="<?php echo $page_link; ?>" class="btn btn--red">Schedule Consultation</a>
 			</div>
 		</div>
 	</div>

@@ -43,6 +43,7 @@ require_once get_template_directory() . '/includes/post-types/staff.php';
 require_once get_template_directory() . '/includes/menus/header-menu.php';
 require_once get_template_directory() . '/includes/menus/header-menu-men.php';
 require_once get_template_directory() . '/includes/menus/footer-menu.php';
+require_once get_template_directory() . '/includes/menus/footer-menu-men.php';
 
 // IMAGE SIZES
 // ==================================================.
