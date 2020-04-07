@@ -1,9 +1,110 @@
 .site-nav {
-	
-	.sub-menu {display:none;}
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 70px 100px 0;
+  z-index: 99;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 
-	// offset if WP admin bar is present
-	.admin-bar & {top:46px;
-		@media (min-width: 783px) {top:32px;}
-	}
+  .sub-menu {
+    display: none;
+  }
+
+  .logo {
+    height: 138px;
+    width: auto;
+    transition: all 0.5s ease-in-out;
+  }
+
+  svg.mens-logo {
+    height: 139px;
+    width: auto;
+    transition: all 0.5s ease-in-out;
+  }
+
+  // offset if WP admin bar is present
+  .admin-bar & {
+    top: 46px;
+    @media (min-width: 783px) {
+      top: 32px;
+    }
+  }
+
+  button[data-toggle="menu"] {
+    background: none;
+    border: none;
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: 217px;
+
+    .menu--holder {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 24px;
+      height: 18px;
+      margin-right: 15px;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $white;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      font-family: $open-condensed;
+    }
+  }
+
+  .call {
+    font-size: 20px;
+    line-height: 1.35em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: bold;
+
+    i {
+      margin-left: 21px;
+      height: 40px;
+      width: 40px;
+      background: $red;
+      color: $white;
+      border-radius: 100em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &.site-nav-men {
+    .call {
+      i {
+        background: $blue;
+      }
+    }
+  }
+
+  &.sticky {
+    background: rgba(35, 31, 32, 0.8);
+    padding: 5px 25px;
+
+    .logo,
+    svg.mens-logo {
+      height: 100px;
+      width: auto;
+    }
+  }
 }

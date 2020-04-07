@@ -14,24 +14,18 @@
 ?>
 
 <nav class="site-nav">
+	<button data-toggle="menu">
+		<div class="menu--holder">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<p>MENU</p>
+	</button>
+
 	<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<?php get_template_part( 'components/svg/logo' ); ?>
+		<img src="/wp-content/uploads/2020/04/carolina-color.png" class="logo" />
 	</a>
 
-	<?php
-	$args = array(
-		'theme_location' => 'header-menu',
-		'container'      => false,
-		'menu_class'     => 'menu',
-	);
-	wp_nav_menu( $args );
-	?>
-
 	<?php get_template_part( 'components/call' ); ?>
-	<?php get_template_part( 'components/social-icons' ); ?>
-	<button data-toggle="menu">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
 </nav>

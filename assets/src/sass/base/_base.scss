@@ -1,19 +1,27 @@
 html {
-    background: white;
+  background: white;
+  font-size: 10px;
+}
+
+body {
+  font-family: $open-sans;
+  font-size: 1.8rem;
+  line-height: 1.6666em;
+  color: $dark-gray;
 }
 
 *:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 a {
-    &:hover {
-        text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .site-wrap {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 // Remove subpixel-antialiased default but keep for retina resolutions.
@@ -21,23 +29,51 @@ a {
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-        -webkit-font-smoothing: subpixel-antialiased;
-    }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min-device-pixel-ratio: 1.25),
+    only screen and (min-resolution: 200dpi),
+    only screen and (min-resolution: 1.25dppx) {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
 }
 
 // Remove text-shadow in selection highlight:
 // https://twitter.com/miketaylr/status/12228805301
 ::-moz-selection {
-    background: $selection-highlight-background;
-    color: $selection-highlight-color;
-    text-shadow: none;
+  background: $selection-highlight-background;
+  color: $selection-highlight-color;
+  text-shadow: none;
 }
 
 ::selection {
-    background: $selection-highlight-background;
-    color: $selection-highlight-color;
-    text-shadow: none;
+  background: $selection-highlight-background;
+  color: $selection-highlight-color;
+  text-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  font-family: $open-condensed;
+}
+
+h1 {
+  font-size: 8.2rem;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 4.5rem;
+  line-height: 1.2em;
+}
+
+h5 {
+  font-size: 2rem;
+  line-height: 1.35em;
+  letter-spacing: 0.02em;
 }

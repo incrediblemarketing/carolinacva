@@ -23,8 +23,8 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   zip = require("gulp-zip");
 
-var themeName = "incredibletheme",
-  localSiteUrl = "dev.incredible.com",
+var themeName = "carolinacva",
+  localSiteUrl = "dev.carolina.com",
   buildDir = "./build/",
   buildInclude = [
     // include all

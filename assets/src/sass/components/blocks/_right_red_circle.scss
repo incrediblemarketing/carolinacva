@@ -1,0 +1,41 @@
+.block--right_red_circle {
+  position: relative;
+  padding: 150px 0 81px;
+  z-index: 1;
+
+  &:nth-child(8) {
+    .line-to-left {
+      display: none;
+    }
+  }
+
+  .content {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .red--circle {
+    overflow: hidden;
+    border-radius: 100em;
+    border: 10px solid $red;
+    width: 270px;
+    height: 270px;
+    z-index: 1;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  h2 {
+    color: $dark-blue;
+    margin-bottom: 15px;
+  }
+
+  .line-to-left {
+    position: absolute;
+    bottom: -150px;
+    left: 26vw;
+    z-index: -1;
+  }
+}

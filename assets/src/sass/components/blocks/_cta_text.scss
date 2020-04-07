@@ -1,0 +1,38 @@
+.block--cta_text {
+  background: $dark-blue;
+
+  .text--holder {
+    width: calc(100% + 90px);
+    position: relative;
+    left: -45px;
+    padding: 57px;
+    background: $white;
+    box-shadow: -5px 20px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    margin: 183px 0 131px;
+  }
+
+  .red-top-curve {
+    position: absolute;
+    bottom: 580px;
+    left: 0;
+  }
+
+  .top-blue-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  h2 {
+    color: $dark-blue;
+    margin-bottom: 50px;
+  }
+
+  .btn--red {
+    margin-top: 30px;
+    width: auto;
+    display: inline-flex;
+    padding: 0 34px;
+  }
+}

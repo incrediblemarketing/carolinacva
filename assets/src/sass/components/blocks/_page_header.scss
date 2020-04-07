@@ -1,0 +1,27 @@
+.block--page_header {
+  .container-fluid {
+    padding: 0;
+  }
+  .image--holder {
+    position: relative;
+    z-index: 0;
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url(shutterstock_563918173.jpg);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      @include absolute_cover();
+      z-index: 2;
+    }
+  }
+}

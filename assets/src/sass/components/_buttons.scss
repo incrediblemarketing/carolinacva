@@ -1,0 +1,85 @@
+.btn {
+  display: flex;
+  height: 65px;
+  width: 157px;
+  border-radius: 10px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  font-family: $open-condensed;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn--red {
+  background: $red;
+  color: $white;
+  border: 1px solid $red;
+
+  &:hover {
+    background: $white;
+    color: $red;
+  }
+}
+
+.btn--blue {
+  background: $blue;
+  color: $white;
+  border: 1px solid $blue;
+
+  &:hover {
+    background: $white;
+    color: $blue;
+  }
+}
+
+.red--link {
+  font-size: 16px;
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $red;
+  font-weight: bold;
+
+  &::after {
+    content: "\f101";
+    font-family: $fontawesome;
+    margin-left: 10px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      margin-left: 20px;
+    }
+  }
+}
+.blue--link {
+  font-size: 16px;
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $blue;
+  font-weight: bold;
+
+  &::after {
+    content: "\f101";
+    font-family: $fontawesome;
+    margin-left: 10px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      margin-left: 20px;
+    }
+  }
+}

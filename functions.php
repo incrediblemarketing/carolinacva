@@ -33,13 +33,15 @@ require_once get_template_directory() . '/includes/acf/admin-styles.php';
 // POST TYPES
 // ==================================================.
 require_once get_template_directory() . '/includes/post-types/galleries.php';
-require_once get_template_directory() . '/includes/post-types/procedures.php';
+require_once get_template_directory() . '/includes/post-types/cva.php';
+require_once get_template_directory() . '/includes/post-types/men.php';
 require_once get_template_directory() . '/includes/post-types/testimonials.php';
 require_once get_template_directory() . '/includes/post-types/staff.php';
 
 // MENUS
 // ==================================================.
 require_once get_template_directory() . '/includes/menus/header-menu.php';
+require_once get_template_directory() . '/includes/menus/header-menu-men.php';
 require_once get_template_directory() . '/includes/menus/footer-menu.php';
 
 // IMAGE SIZES

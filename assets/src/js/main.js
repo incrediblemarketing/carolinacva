@@ -25,8 +25,15 @@
           this.mobileMenu();
           this.siteNavSticky();
           this.galleryBuilder();
-          this.swiperSetup();
-        },
+					this.swiperSetup();
+					this.hoverLander();
+				},
+				hoverLander: function(){
+					$('.landing--half').on('hover', function(){
+						$('.landing--half').removeClass('hovered');
+						$(this).toggleClass('hovered');
+					})
+				},
         siteNavSticky: function() {
           $cache.window.scroll(function() {
             if ($cache.window.scrollTop() > 0) {
@@ -227,7 +234,40 @@
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev"
             }
-          });
+					});
+					var testimonialHome = new Swiper('.testimonials--slider', {
+						loop:true,
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
+						loop: true,
+						pagination: {
+							el: '.testimonial--pagination',
+							type: "custom",
+							renderCustom: function(swiper, current, total) {
+								console.log('made it');
+								var names = [];
+								$(".testimonials--slider .swiper-slide").each(function(i) {
+									console.log($(this));
+
+									names.push($(this).data("name"));
+								});
+								console.log(names);
+								
+								var text = "<div class='pagination--flex'>";
+								for (var i = 1; i <= total; i++) {
+									if (current == i) {
+										text += "<span class='current'>" + names[i] + "<img src='/wp-content/uploads/2020/04/stars.png' /></span>";
+									} else {
+										text += "<span>" + names[i] + "<img src='/wp-content/uploads/2020/04/stars.png' /></span>";
+									}			
+								}
+								text += "</div>";
+								return text;
+							}
+						}
+					});
         }
       }
     };

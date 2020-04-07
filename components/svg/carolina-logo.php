@@ -1,0 +1,1 @@
+<img src="/wp-content/uploads/2020/04/carolina-logo.png" class="logo"/>

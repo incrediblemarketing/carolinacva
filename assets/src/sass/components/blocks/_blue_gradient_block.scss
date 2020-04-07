@@ -1,0 +1,43 @@
+.block--blue_gradient_block {
+  position: relative;
+  padding: 188px 0;
+  color: $white;
+
+  .image--holder {
+    @include absolute_cover();
+    z-index: 0;
+
+    img {
+      @include absolute_cover();
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      background: linear-gradient(
+        90deg,
+        #0e6596 21.21%,
+        rgba(14, 101, 150, 0) 78.54%
+      );
+      @include absolute_cover();
+      z-index: 2;
+    }
+  }
+  h2 {
+    color: $white;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+  .bottom-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    path {
+      fill: $white;
+    }
+  }
+}

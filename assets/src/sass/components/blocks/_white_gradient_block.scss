@@ -1,0 +1,34 @@
+.block--white_gradient_block {
+  position: relative;
+  padding: 132px 0;
+
+  .image--holder {
+    @include absolute_cover();
+    z-index: 0;
+
+    img {
+      @include absolute_cover();
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      background: linear-gradient(
+        90deg,
+        #fefefe 34.84%,
+        rgba(255, 255, 255, 0) 79.42%
+      );
+      @include absolute_cover();
+      z-index: 2;
+    }
+  }
+  h2 {
+    color: $dark-blue;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}
