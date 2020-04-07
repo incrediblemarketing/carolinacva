@@ -29,7 +29,7 @@ get_header( 'landing-page' );  ?>
 						<?php endif; ?>
 						<h2>Carolina Cardiology & Vascular Associates</h2>
 						<h5>The Vein, Heart & Blood Center</h5>
-						<a href="/carolina/" class="btn btn--red">ENTER SITE</a>
+						<a href="/cardiology/" class="btn btn--red">ENTER SITE</a>
 					</div>
 					<div class="landing--half hovered">
 							<?php get_template_part( 'components/svg/men-logo' ); ?>

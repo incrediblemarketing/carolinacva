@@ -23,6 +23,7 @@
 
   .image--holder {
     @include absolute_cover;
+    mix-blend-mode: multiply;
     img {
       @include absolute_cover;
       object-fit: cover;
