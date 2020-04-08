@@ -14,6 +14,7 @@
       @include absolute_cover;
       object-fit: cover;
       opacity: 1;
+      display: block;
     }
     &::before {
       content: "";
@@ -28,7 +29,15 @@
   }
 
   .content {
-    padding: 150px 0 120px;
+    padding: 70px 15px;
+
+    @include mq(md) {
+      padding: 100px 0 70px;
+    }
+
+    @include mq(xl) {
+      padding: 150px 0 120px;
+    }
   }
 
   h2 {
@@ -39,5 +48,9 @@
   img {
     max-width: 100%;
     height: auto;
+
+    @include mq($until: lg) {
+      display: none;
+    }
   }
 }

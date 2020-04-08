@@ -11,10 +11,18 @@
 
 .block--schedule-consultation {
   position: relative;
-  padding: 149px 0 269px;
+  padding: 70px 15px 150px;
   z-index: 0;
   text-align: center;
   color: $white;
+
+  @include mq(lg) {
+    padding: 100px 0 200px;
+  }
+
+  @include mq(xl) {
+    padding: 149px 0 269px;
+  }
 
   .image--holder {
     @include absolute_cover();
@@ -28,15 +36,30 @@
     }
   }
   h3 {
-    font-size: 8.2rem;
+    font-size: 3.5rem;
     line-height: 1.21em;
     margin-bottom: 18px;
+
+    @include mq(md) {
+      font-size: 5.5rem;
+    }
+    @include mq(lg) {
+      font-size: 7.2rem;
+    }
+    @include mq(xl) {
+      font-size: 8.2rem;
+    }
   }
   p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.666em;
     color: #dddddd;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+
+    @include mq(md) {
+      margin-bottom: 70px;
+      font-size: 1.8rem;
+    }
 
     a {
       color: $white;
@@ -46,6 +69,15 @@
   }
 
   &.block--men {
+    padding: 70px 15px;
+
+    @include mq(lg) {
+      padding: 100px 0;
+    }
+
+    @include mq(xl) {
+      padding: 149px 0;
+    }
     .image--holder {
       img {
         mix-blend-mode: unset;
@@ -64,10 +96,20 @@
 
 footer {
   position: relative;
-  margin-top: -164px;
-  padding: 260px 0 40px;
+  margin-top: -200px;
+  padding: 180px 15px 40px;
   z-index: 0;
   text-align: center;
+
+  @include mq(md) {
+    margin-top: -200px;
+    padding: 260px 0 40px;
+  }
+
+  @include mq(xl) {
+    margin-top: -164px;
+    padding: 260px 0 40px;
+  }
 
   .footer-red-curve {
     position: absolute;
@@ -84,17 +126,26 @@ footer {
   }
 
   .copyright {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     color: #5e5e5e;
+
+    @include mq(md) {
+      font-size: 16px;
+    }
   }
 
   .menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 60px 0;
     list-style: none;
     padding: 0;
+
+    @include mq($until: md) {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -105,8 +156,12 @@ footer {
     }
 
     li {
-      padding: 0 19px;
+      padding: 0 1vw;
       position: relative;
+
+      @include mq(xl) {
+        padding: 0 19px;
+      }
       &::after {
         content: "";
         display: block;
@@ -138,7 +193,12 @@ footer {
   .social-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 9vh;
+    margin: 25px 0;
+
+    @include mq(md) {
+      margin-bottom: 9vh;
+      margin-top: 0;
+    }
 
     li {
       margin: 0 7.5px;
@@ -158,8 +218,12 @@ footer {
 
   &.footer-men {
     margin: 0;
-    padding: 150px 0 40px;
+    padding: 70px 0 40px;
     z-index: 0;
+
+    @include mq(xl) {
+      padding: 150px 0 40px;
+    }
 
     .image--holder {
       @include absolute_cover;
@@ -171,6 +235,10 @@ footer {
     }
 
     .social-icons {
+      margin-bottom: 25px;
+      @include mq(xl) {
+        margin-bottom: 9vh;
+      }
       li {
         a {
           background: $black-blue;

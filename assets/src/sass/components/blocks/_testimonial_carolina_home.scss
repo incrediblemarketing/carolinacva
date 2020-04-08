@@ -1,8 +1,18 @@
 .block--testimonial_carolina_home {
-  padding: 336px 0 264px;
-  margin-top: -168px;
+  padding: 70px 15px;
   z-index: 0;
   text-align: center;
+  @include mq(md) {
+    padding: 90px 0 180px;
+  }
+  @include mq($until: xl) {
+    background: #f5f5f5;
+  }
+
+  @include mq(xl) {
+    padding: 336px 0 264px;
+    margin-top: -168px;
+  }
 
   .gray-curve {
     position: absolute;
@@ -25,41 +35,63 @@
     background: $white;
     box-shadow: -5px 20px 30px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
-    padding: 90px 113px;
+    padding: 40px 60px;
     display: flex;
     position: relative;
     width: calc(100% + 30px);
     left: -15px;
     align-items: center;
 
+    @include mq(md) {
+      padding: 60px 80px;
+    }
+
+    @include mq(lg) {
+      padding: 90px 113px;
+    }
+
     .quote {
       margin-right: 68px;
       width: 137px;
       height: 93px;
       display: block;
+
+      @include mq($until: lg) {
+        display: none;
+      }
     }
 
     .testimonials--slider {
-      max-width: 77%;
+      max-width: 100%;
       text-align: left;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       line-height: 1.81em;
       font-style: italic;
       position: unset;
+
+      @include mq(lg) {
+        font-size: 2.2rem;
+        max-width: 77%;
+      }
     }
 
     .swiper--nav {
       position: absolute;
-      left: -22px;
-      width: calc(100% + 44px);
+      left: -10px;
+      width: calc(100% + 20px);
       top: 50%;
       transform: translateY(-50%);
       height: 64px;
 
+      @include mq(md) {
+        left: -22px;
+        width: calc(100% + 44px);
+      }
+
       .swiper-button-next,
       .swiper-button-prev {
-        height: 64px;
-        width: 64px;
+        height: 45px;
+        width: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -67,10 +99,16 @@
         box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.17);
         border-radius: 10px;
         color: $white;
-        font-size: 22px;
+        font-size: 18px;
         top: 0;
         margin: 0;
         transition: all 0.4s ease-in-out;
+
+        @include mq(md) {
+          font-size: 22px;
+          height: 64px;
+          width: 64px;
+        }
 
         &:hover {
           background: $red;
@@ -91,11 +129,19 @@
       height: 114px;
       width: 100%;
 
+      @include mq($until: md) {
+        display: none;
+      }
+
       .pagination--flex {
         display: flex;
         justify-content: space-around;
-        width: 80%;
         margin: 0 auto;
+        width: 100%;
+
+        @include mq(lg) {
+          width: 80%;
+        }
 
         span {
           position: relative;
@@ -119,8 +165,8 @@
               content: "";
               height: 35px;
               width: 50px;
-              border-right: 0 solid $white;
-              border-left: 50px solid transparent;
+              border-right: 0 solid transparent;
+              border-left: 50px solid $white;
               border-bottom: 34px solid transparent;
               position: absolute;
               top: 0;
@@ -141,9 +187,19 @@
 
   .page-template-template-men & {
     margin: 0;
-    padding: 160px 0 236px;
     background: url(/wp-content/uploads/2020/04/gray-bg.jpg) no-repeat center /
       cover;
+    background-size: 100% 102%;
+    padding: 70px 15px;
+    z-index: 0;
+    text-align: center;
+    @include mq(md) {
+      padding: 90px 0 180px;
+    }
+
+    @include mq(xl) {
+      padding: 160px 0 236px;
+    }
 
     .gray-curve {
       display: none;

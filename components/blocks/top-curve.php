@@ -18,7 +18,7 @@ $side_image    = get_sub_field( 'side_image' );
 ?>
 
 
-<svg class="top-curve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1919.95 777.9" preserveAspectRatio="xMaxYMin slice">
+<svg class="top-curve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1919.95 777.9" preserveAspectRatio="xMinYMid slice">
 	<defs>
 		<mask id="top-curve-mask">
 			<rect id="Rectangle" fill="#000" x="0" y="0"></rect>
@@ -26,18 +26,19 @@ $side_image    = get_sub_field( 'side_image' );
 		</mask>
 	</defs>
 	<image class="top-curve-image" preserveAspectRatio="xMinYMid slice" x="0" y="0" viewBox="0 0 1919.95 777.9" mask="url(#top-curve-mask)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo $image['sizes']['hero_thumb']; ?>" width="1920" height="778"></image>
+	<path class="swoosh" fill="#ac5252" d="M1395,48.1c-407,57-880,381-1395,200v48c72.67,29.34,250,63,477,29C760.73,282.61,1150,88.1,1395,48.1Z" transform="translate(0.01 0)"/>
 </svg>
-<?php get_template_part( 'components/svg/left-swoosh' ); ?>
+
 <div class="container">
 	<div class="row align-items-center">
-		<div class="col-xl-6">
+		<div class="col-lg-6">
 			<?php if ( $side_image ) : ?>
 				<div class="image--holder">
 					<img src="<?php echo esc_url( $side_image['url'] ); ?>" alt="<?php echo esc_attr( $side_image['alt'] ); ?>" />
 				</div>
 			<?php endif; ?>
 		</div>
-		<div class="col-xl-6">
+		<div class="col-lg-6 content">
 			<h2><?php echo esc_attr( $content_title ); ?></h2>
 			<?php echo $content; ?>
 		</div>

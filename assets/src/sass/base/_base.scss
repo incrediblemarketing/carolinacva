@@ -5,9 +5,13 @@ html {
 
 body {
   font-family: $open-sans;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.6666em;
   color: $dark-gray;
+
+  @include mq(md) {
+    font-size: 1.8rem;
+  }
 }
 
 *:last-child {
@@ -63,17 +67,40 @@ h5 {
 }
 
 h1 {
-  font-size: 8.2rem;
+  font-size: 3rem;
   line-height: 1.1em;
+
+  @include mq(md) {
+    font-size: 4rem;
+  }
+
+  @include mq(lg) {
+    font-size: 6rem;
+  }
+
+  @include mq(xxl) {
+    font-size: 8.2rem;
+  }
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   line-height: 1.2em;
+
+  @include mq(md) {
+    font-size: 3.5rem;
+  }
+  @include mq(lg) {
+    font-size: 4.5rem;
+  }
 }
 
 h5 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.35em;
   letter-spacing: 0.02em;
+
+  @include mq(md) {
+    font-size: 2rem;
+  }
 }

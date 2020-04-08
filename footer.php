@@ -41,7 +41,6 @@
 </section>
 
 <footer class="footer">
-	<?php get_template_part( 'components/svg/footer-red' ); ?>
 	<svg class="footer-curve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 710.9" preserveAspectRatio="xMidYMid slice">
 		<defs>
 			<mask id="footer-curve-mask">
@@ -50,6 +49,8 @@
 			</mask>
 		</defs>
 		<image class="footer-image" preserveAspectRatio="xMidYMax slice" x="0" y="0" viewBox="0 0 1920 710.9" mask="url(#footer-curve-mask)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo $footer_image['sizes']['hero_thumb']; ?>" width="1920" height="710"></image>
+		<path fill="#ac5252" d="M1068,164.65c244-23,440-192,852-134v48C1589-3.35,1293,170.65,1068,164.65Z" transform="translate(0 0.01)"/>
+		<path fill="#ac5252" d="M852,164.7c-261.5-52-534-208-852-134v48C354.5-7.85,533,132.15,852,164.7Z" transform="translate(0 0.01)"/>
 	</svg>
 
 	<?php get_template_part( 'components/svg/heart-icon' ); ?>

@@ -25,15 +25,15 @@ $side_image    = get_sub_field( 'side_image' );
 <?php endif; ?>
 
 <div class="container">
-	<div class="row align-items-center">
-		<div class="col-xl-6">
+	<div class="row align-items-end">
+		<div class="col-lg-6">
 			<?php if ( $side_image ) : ?>
 				<div class="image--holder">
 					<img src="<?php echo esc_url( $side_image['url'] ); ?>" alt="<?php echo esc_attr( $side_image['alt'] ); ?>" />
 				</div>
 			<?php endif; ?>
 		</div>
-		<div class="col-xl-6 content">
+		<div class="col-lg-6 content">
 			<h2><?php echo esc_attr( $content_title ); ?></h2>
 			<?php echo $content; ?>
 		</div>

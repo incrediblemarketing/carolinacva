@@ -17,18 +17,18 @@ $side_image    = get_sub_field( 'side_image' );
 ?>
 
 <div class="container">
-	<div class="row align-items-center">
-		<div class="col-xl-6 offset-xl-3 content">
-			<h2><?php echo esc_attr( $content_title ); ?></h2>
-			<?php echo $content; ?>
-		</div>
-		<div class="col-xl-3">
+	<div class="row align-items-center flex-row-reverse">
+		<div class="col-xl-3 col-md-4">
 			<?php if ( $side_image ) : ?>
 				<div class="image--holder red--circle">
 					<img src="<?php echo esc_url( $side_image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( $side_image['alt'] ); ?>" />
 				</div>
 			<?php endif; ?>
+			<?php get_template_part( 'components/svg/line-to-left' ); ?>
+		</div>
+		<div class="col-xl-6 offset-xl-3 col-md-8 content">
+			<h2><?php echo esc_attr( $content_title ); ?></h2>
+			<?php echo $content; ?>
 		</div>
 	</div>
 </div>
-<?php get_template_part( 'components/svg/line-to-left' ); ?>

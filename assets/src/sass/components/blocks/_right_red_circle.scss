@@ -1,7 +1,18 @@
 .block--right_red_circle {
   position: relative;
-  padding: 150px 0 81px;
+  padding: 50px 0;
   z-index: 1;
+
+  @include mq(md) {
+    padding: 70px 0;
+  }
+  @include mq(lg) {
+    padding: 130px 0 60px;
+  }
+
+  @include mq(xl) {
+    padding: 150px 0 81px;
+  }
 
   &:nth-child(8) {
     .line-to-left {
@@ -10,17 +21,27 @@
   }
 
   .content {
-    padding-right: 50px;
-    padding-left: 50px;
+    @include mq(md) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
   }
 
   .red--circle {
     overflow: hidden;
     border-radius: 100em;
     border: 10px solid $red;
-    width: 270px;
-    height: 270px;
+    width: 225px;
+    height: 225px;
     z-index: 1;
+    @include mq($until: md) {
+      margin: 0 auto 25px;
+    }
+
+    @include mq(lg) {
+      width: 270px;
+      height: 270px;
+    }
 
     img {
       object-fit: cover;
@@ -34,8 +55,25 @@
 
   .line-to-left {
     position: absolute;
-    bottom: -150px;
-    left: 26vw;
+    top: 100%;
+    right: 8vw;
     z-index: -1;
+    width: 67vw;
+    transform: rotate(-19deg);
+
+    @include mq($until: md) {
+      display: none;
+    }
+
+    @include mq(lg) {
+      right: 14vw;
+      transform: rotate(-5deg);
+    }
+
+    @include mq(xl) {
+      right: 7vw;
+      width: auto;
+      transform: unset;
+    }
   }
 }
