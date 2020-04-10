@@ -28,5 +28,5 @@
 
 <body <?php body_class(); ?>>
 	<div class="site-wrap">
-			<?php get_template_part( 'components/mobile-menu-men' ); ?>
+			<?php get_template_part( 'components/mobile-menu' ); ?>
 			<?php get_template_part( 'components/site-nav-men' ); ?>

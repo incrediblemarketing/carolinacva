@@ -2,31 +2,44 @@
   background: $dark-blue;
 
   .text--holder {
-    width: calc(100% + 90px);
     position: relative;
-    left: -45px;
-    padding: 57px;
+    padding: 25px;
     background: $white;
     box-shadow: -5px 20px 30px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
-    margin: 183px 0 131px;
-  }
+    margin: 80px 0;
+    width: 100%;
 
-  .red-top-curve {
-    position: absolute;
-    bottom: 580px;
-    left: 0;
+    @include mq(md) {
+      width: calc(100% + 90px);
+      left: -45px;
+    }
+
+    @include mq(lg) {
+      margin: 120px 0 100px;
+    }
+
+    @include mq(xl) {
+      margin: 183px 0 131px;
+      padding: 57px;
+    }
   }
 
   .top-blue-curve {
     position: absolute;
-    bottom: 0;
+    height: calc(100% - 183px);
     left: 0;
+    width: 100%;
+    bottom: 0;
   }
 
   h2 {
     color: $dark-blue;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(xl) {
+      margin-bottom: 50px;
+    }
   }
 
   .btn--red {
@@ -34,5 +47,11 @@
     width: auto;
     display: inline-flex;
     padding: 0 34px;
+  }
+
+  image.blue-curve-image {
+    @include mq($until: md) {
+      display: none;
+    }
   }
 }

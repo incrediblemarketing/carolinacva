@@ -22,7 +22,7 @@
 	$image        = get_field( 'schedule_image', 'option' );
 	$footer_image = get_field( 'footer_image', 'option' );
 ?>
-
+<?php if ( ! is_single( 376 ) ) : ?>
 <section class="block block--schedule-consultation">
 	<?php if ( ! empty( $image ) ) : ?>
 		<div class="image--holder">
@@ -39,6 +39,7 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 
 <footer class="footer">
 	<svg class="footer-curve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 710.9" preserveAspectRatio="xMidYMid slice">

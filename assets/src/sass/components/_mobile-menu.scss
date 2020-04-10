@@ -5,20 +5,93 @@
   height: 100%;
   left: -100%;
   opacity: 0;
-  padding: 60px 15px;
+  padding: 0;
   background-attachment: unset;
-  @include mq(md) {
-    padding: 60px 45px;
+  overflow: hidden;
+  display: flex;
+  @include mq($until: sm) {
+    flex-direction: column;
   }
+
+  .half-menu {
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+    z-index: 0;
+    padding: 50px 15px;
+    @include mq(md) {
+      padding: 5vw 35px;
+    }
+    @include mq($until: sm) {
+      width: 100%;
+    }
+
+    .image--holder {
+      @include absolute_cover();
+      z-index: -1;
+
+      img {
+        @include absolute_cover();
+        object-fit: cover;
+        opacity: 0.35;
+      }
+
+      &::after {
+        mix-blend-mode: multiply;
+      }
+    }
+
+    &.cardio--half {
+      @include mq(md) {
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+        width: 60%;
+        margin-right: -10%;
+        padding-right: 15%;
+      }
+      .image--holder {
+        background: $red;
+        &::after {
+          content: "";
+          @include absolute_cover();
+          background: rgba($red, 0.95);
+        }
+      }
+    }
+    &.mens--half {
+      @include mq(md) {
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+        margin-left: -10%;
+        width: 60%;
+        padding-left: 15%;
+      }
+      .image--holder {
+        background: $blue;
+        &::after {
+          content: "";
+          @include absolute_cover();
+          background: rgba($men-blue, 0.95);
+        }
+      }
+    }
+  }
+
   .logo {
-    width: 240px;
-    height: auto;
+    width: auto;
+    height: 80px;
     margin: 0 auto 15px;
     display: flex;
 
+    @include mq(md) {
+      height: 120px;
+    }
+    @include mq(xxl) {
+      height: 150px;
+    }
+
     svg {
-      path {
-      }
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
     }
   }
   .site__logo {
@@ -41,12 +114,18 @@
     position: absolute;
     right: 15px;
     top: 35px;
+    z-index: 9;
+
+    &:focus {
+      outline: none;
+    }
+
     span {
       height: 3px;
       width: 35px;
       margin: 0;
       display: block;
-      background: $black;
+      background: $white;
       transform: rotate(45deg);
       position: absolute;
       top: 11px;
@@ -59,10 +138,11 @@
     padding: 0;
     margin: 45px 0;
     list-style: none;
-    max-height: 70%;
-    height: 70%;
+    max-height: 62%;
+    height: 62%;
     overflow: auto;
     text-align: center;
+    overflow-x: hidden;
     @media screen and (max-height: 600px) {
       max-height: 49%;
     }
@@ -70,16 +150,24 @@
       margin-top: 15px;
     }
     li {
-      font-size: 24px;
+      font-size: 18px;
       line-height: 2em;
       display: block;
       font-weight: 400;
       position: relative;
       left: -100%;
-      @include mq(md) {
-        font-size: 35px;
+
+      @include mq(lg) {
+        font-size: 20px;
+      }
+      @include mq(xl) {
+        font-size: 24px;
+      }
+      @include mq(xxl) {
+        font-size: 30px;
       }
       i {
+        color: $white;
         margin-left: 20px;
         position: absolute;
         top: 11px;
@@ -88,20 +176,21 @@
         }
       }
       a {
-        color: $black;
+        color: $white;
         text-decoration: none !important;
         &:hover {
-          color: $primary;
+          color: $blue;
         }
       }
       .sub-menu {
         display: none;
         &.active {
           display: block;
+          padding: 0;
         }
         li {
           left: 0;
-          font-size: 1rem;
+          font-size: 1.6rem;
           font-weight: 300;
           @include mq(md) {
             font-size: 26px;
@@ -113,9 +202,9 @@
             }
           }
           a {
-            color: $black;
+            color: $white;
             &:hover {
-              color: $primary;
+              color: $blue;
             }
           }
           .sub-menu {
@@ -138,15 +227,47 @@
   }
   .social-icons {
     justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: none !important;
+    @include mq(md) {
+      display: flex !important;
+    }
     li {
       margin: 5px 15px;
       a {
-        color: $black;
+        color: $white;
         font-size: 22px;
         &:hover {
-          color: $primary;
+          color: $red;
         }
       }
+    }
+  }
+
+  .call {
+    position: absolute;
+    z-index: 9;
+    bottom: 25px;
+    left: 25px;
+    color: $white;
+    align-items: center;
+    display: none;
+    @include mq(md) {
+      display: flex;
+    }
+
+    i {
+      margin-left: 10px;
+      height: 30px;
+      width: 30px;
+      background: $blue;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100em;
+      font-size: 12px;
     }
   }
 }

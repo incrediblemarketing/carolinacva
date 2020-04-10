@@ -11,7 +11,7 @@
  * @since      1.0.0
  */
 
-$image    = get_sub_field( 'background_image' );
+$image = get_sub_field( 'background_image' );
 ?>
 
 <div class="container-fluid">
@@ -20,4 +20,5 @@ $image    = get_sub_field( 'background_image' );
 			<img src="<?php echo esc_url( $image['sizes']['page_header_thumb'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
 		</div>
 	<?php endif; ?>
+	<h1><?php echo esc_attr( get_the_title() ); ?></h1>
 </div>

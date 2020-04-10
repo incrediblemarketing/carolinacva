@@ -57,4 +57,16 @@
       display: none;
     }
   }
+
+  h4 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: $red;
+  }
+
+  i {
+    color: $dark-blue;
+    margin-right: 8px;
+  }
 }

@@ -1,7 +1,12 @@
 .block--white_column {
-  padding: 88px 0;
+  padding: 70px 0;
 
-  h2 {
+  @include mq(md) {
+    padding: 88px 0;
+  }
+
+  h2,
+  h3 {
     color: $dark-blue;
     margin-bottom: 30px;
   }

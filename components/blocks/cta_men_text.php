@@ -24,7 +24,7 @@ $image         = get_sub_field( 'background_image' );
 <?php endif; ?>
 <div class="container">
 	<div class="row">
-		<div class="col-xl-6 offset-xl-6">
+		<div class="col-xl-6 offset-xl-6 col-lg-7 offset-lg-5 col-md-7 offset-md-5 col-12">
 			<div class="text--holder">
 				<h2><?php echo esc_attr( $content_title ); ?></h2>
 				<?php echo $content; ?>

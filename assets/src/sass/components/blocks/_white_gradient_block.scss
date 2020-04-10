@@ -1,6 +1,14 @@
 .block--white_gradient_block {
   position: relative;
-  padding: 132px 0;
+  padding: 70px 0;
+
+  @include mq(md) {
+    padding: 100px 0;
+  }
+
+  @include mq(lg) {
+    padding: 132px 0;
+  }
 
   .image--holder {
     @include absolute_cover();
@@ -10,17 +18,39 @@
       @include absolute_cover();
       object-fit: cover;
       z-index: 1;
+      @include mq($until: md) {
+        object-position: right;
+      }
     }
 
     &::after {
       content: "";
-      background: linear-gradient(
-        90deg,
-        #fefefe 34.84%,
-        rgba(255, 255, 255, 0) 79.42%
-      );
+      background: rgba(255, 255, 255, 0.85);
       @include absolute_cover();
       z-index: 2;
+
+      @include mq(md) {
+        background: linear-gradient(
+          90deg,
+          #fefefe 50%,
+          rgba(255, 255, 255, 0.5) 100%
+        );
+      }
+
+      @include mq(lg) {
+        background: linear-gradient(
+          90deg,
+          #fefefe 54.84%,
+          rgba(255, 255, 255, 0) 89.42%
+        );
+      }
+      @include mq(xl) {
+        background: linear-gradient(
+          90deg,
+          #fefefe 34.84%,
+          rgba(255, 255, 255, 0) 79.42%
+        );
+      }
     }
   }
   h2 {

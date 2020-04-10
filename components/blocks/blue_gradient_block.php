@@ -16,18 +16,19 @@ $content       = get_sub_field( 'content' );
 $image         = get_sub_field( 'background_image' );
 ?>
 
-<?php 
-if ( $image ) : ?>
+<?php
+if ( $image ) :
+	?>
 	<div class="image--holder">
 		<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
 	</div>
 <?php endif; ?>
 <div class="container">
 	<div class="row align-items-center">
-		<div class="col-xl-6">
+		<div class="col-xl-6 col-lg-8 col-md-10 col-12">
 			<h2><?php echo esc_attr( $content_title ); ?></h2>
 			<?php echo $content; ?>
 		</div>
 	</div>
 </div>
-<?php get_template_part( 'components/svg/bottom-curve'); ?>
+<?php get_template_part( 'components/svg/bottom-curve' ); ?>

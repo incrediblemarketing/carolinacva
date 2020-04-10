@@ -248,3 +248,15 @@ footer {
     }
   }
 }
+
+.postid-376 footer.footer {
+  margin-top: -87px;
+  @include mq(md) {
+    margin-top: -148px;
+    padding: 190px 0 40px;
+  }
+  @include mq(xl) {
+    margin-top: -164px;
+    padding: 260px 0 40px;
+  }
+}
